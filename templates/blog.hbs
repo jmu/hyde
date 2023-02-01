@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> include_head }}
+
+<body class="{{ site.info.extra.hyde_theme }} {{#if site.info.extra.hyde_reverse }}layout-reverse{{/if}}">
+  <div class="sidebar">
+    {{> include_sidebar }}
+  </div>
+
+  <div class="content container">
+    <div class="post">
+      {{#with page.head}}
+      <h1 class="post-title">{{ title }}</h1>
+      <span class="post-date">{{#if date }}{{date_format ../site.info.extra.date_style date}}{{/if}}</span>
+      {{/with}}
+      {{{page.body}}}
+    </div>
+    <div class="related">
+      <h2>Related Posts</h2>
+      <ul class="related-posts">
+        {{#each (related_page request.spin-path-info site.pages)}}
+        <li>
+          <h3>
+            <a href="{{ this.related_uri }}">
+              {{ page.head.title }}
+              <small>{{#if page.head.date }}{{date_format ../site.info.extra.date_style page.head.date}}{{/if}}</small>
+            </a>
+          </h3>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>

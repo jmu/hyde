@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> include_head }}
+
+<body class="{{ site.info.extra.hyde_theme }} {{#if site.info.extra.hyde_reverse }}layout-reverse{{/if}}">
+  <div class="sidebar">
+    {{> include_sidebar }}
+  </div>
+  <div class="content container">
+
+    {{#if (eq page.head.title "Not Found")}}
+    {{> 404 }}
+    {{else}}
+    {{#with (blogs_paging site.pages request.spin-full-url) as |result|}}
+    <div class="posts">
+      {{#each blog_pages }}
+      {{#if uri }}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ uri }}">
+            {{ page.head.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{#if page.head.date }}{{date_format ../../site.info.extra.date_style page.head.date}}{{/if}}</span>
+        {{{page.body}}}
+      </div>
+      {{/if}}
+      {{/each}}
+    </div>
+    {{#if _paginator}}
+    <div class="pagination">
+      {{#if _paginator.next_page}}
+      <a class="pagination-item older" href="{{ site.info.baseurl }}?p={{_paginator.next_page}}">Older</a>
+      {{else}}
+      <span class="pagination-item older">Older</span>
+      {{/if}}
+      {{#if _paginator.previous_page }}
+      {{!-- {{#if paginator.page == 2 }} --}}
+      {{!-- <a class="pagination-item newer" href="{{ site.info.baseurl }}">Newer</a> --}}
+      {{!-- {% else %} --}}
+      <a class="pagination-item newer" href="{{ site.info.baseurl }}?p={{_paginator.previous_page}}">Newer</a>
+      {{!-- {% endif %} --}}
+      {{else}}
+      <span class="pagination-item newer">Newer</span>
+      {{/if}}
+    </div>
+    {{/if}}
+    {{/with}}
+    {{/if}}
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="container {{#if site.info.title }}sidebar-sticky{{/if}}">
+    <div class="sidebar-about">
+        <h1>
+        <a href="{{ site.info.base_url }}">
+            {{ site.info.title }}
+        </a>
+        </h1>
+        {{#if site.info.about}}
+            <p class="lead">{{{site.info.about}}}</p>
+        {{/if}}
+    </div>
+
+    <ul class="sidebar-nav">
+        <a class="sidebar-nav-item active" href="{{ site.info.baseurl }}">Home</a>
+        <a class="sidebar-nav-item" href="{{ site.info.baseurl }}">About</a>
+        {{!-- {{#each site.info.extra.hyde_links }}
+        <li class="sidebar-nav-item"><a href="{{this.url}}">{{this.name}}</a></li>
+        {{/each}} --}}
+        {{#with site.info.extra}}
+            {{#if github }}<li><a href="{{github}}">GitHub</a></li>{{/if}}
+            {{#if twitter }}<li><a href="{{twitter}}">Twitter</a></li>{{/if}}
+            {{#if facebook }}<li><a href="{{facebook}}">Facebook</a></li>{{/if}}
+        {{/with}}
+       <span class="sidebar-nav-item">Currently v{{ site.info.extra.version }}</span>
+    </ul>
+    <p>&copy; {{ site.info.extra.time }}. All rights reserved.</p>
+</div>
+</div>
