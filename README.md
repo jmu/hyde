@@ -1,6 +1,11 @@
 # hyde
 Hyde is a brazen two-column [Bartholomew](https://bartholomew.fermyon.dev/) based on the Jekyll/Zola theme of the same name that pairs a prominent sidebar with uncomplicated content.
 
+project based on 
+* https://github.com/getzola/hyde
+* https://github.com/poole/hyde
+
+
 ![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
 
