@@ -18,6 +18,8 @@ project based on
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
   - [Paging](#paging)
+  - [Related Post](#related-post)
+  - [Example site.toml](#example-sitetoml)
 
 ## Installation
 First download this theme to your `themes` directory:
