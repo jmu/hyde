@@ -37,7 +37,6 @@ copyright = "The Site Authors"
 time = "2023"
 github = "https://github.com/fermyon"
 twitter = "https://twitter.com/fermyontech"
-]
 ```
 
 ### Sticky sidebar content
