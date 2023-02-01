@@ -1,7 +1,7 @@
 <div class="container {{#if site.info.title }}sidebar-sticky{{/if}}">
     <div class="sidebar-about">
         <h1>
-        <a href="{{ site.info.base_url }}">
+        <a href="{{ site.info.base_url }}/">
             {{ site.info.title }}
         </a>
         </h1>
@@ -11,8 +11,8 @@
     </div>
 
     <ul class="sidebar-nav">
-        <a class="sidebar-nav-item active" href="{{ site.info.baseurl }}">Home</a>
-        <a class="sidebar-nav-item" href="{{ site.info.baseurl }}">About</a>
+        <a class="sidebar-nav-item active" href="{{ site.info.baseurl }}/">Home</a>
+        <a class="sidebar-nav-item" href="{{ site.info.baseurl }}/">About</a>
         {{!-- {{#each site.info.extra.hyde_links }}
         <li class="sidebar-nav-item"><a href="{{this.url}}">{{this.name}}</a></li>
         {{/each}} --}}
