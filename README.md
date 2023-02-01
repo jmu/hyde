@@ -17,6 +17,7 @@ project based on
   - [Sticky sidebar content](#sticky-sidebar-content)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
+  - [Paging](#paging)
 
 ## Installation
 First download this theme to your `themes` directory:
@@ -70,6 +71,15 @@ To create your own theme, look to the Themes section of [included CSS file](http
 ![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
 
 Hyde's page orientation can be reversed by setting `hyde_reverse` to `true` in the `site.toml`. un-do reverse, you need comment out `hyde_reverse` line.
+
+### Paging
+
+This theme support Paging, open-box use. default page size is `6`, change it in scripts/blog_paging.rhai
+
+### Related Post
+Default showing Related-Post in bottom of every blog page.
+
+### Example site.toml
 
 example toml looks like this:
 ```toml
